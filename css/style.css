@@ -1,0 +1,443 @@
+/* General styling */
+body {
+    /* Flex container settings for centering content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Remove default margin */
+    /* Background gradient with cover size - 2-toned gray gradient */
+    background: linear-gradient(to bottom, #555555, #999999);
+    background-size: cover;
+    min-height: 100vh; /* Minimum height of the viewport */
+    overflow: auto; /* Enable scrolling if content overflows */
+    position: relative;
+}
+
+.signature {
+    width: 300px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    transform: rotate(20deg);
+    margin-top: -10%;
+}
+
+/* Container for social buttons */
+.button-container {
+    /* Flex container for arranging buttons vertically */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between buttons */
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Remove underline from links within .button-container */
+.button-container a {
+    text-decoration: none;
+}
+
+/* Social button style */
+.social-button {
+    /* Button appearance and styling */
+    background-color: #555555;
+    color: #999999;
+    width: 200px;
+    height: 40px;
+    border: 2px solid #555555;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 15px;
+    margin-right: 15px;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+}
+
+/* Hover effect for social buttons */
+.social-button:hover {
+    background-color: transparent; /* Transparent background on hover */
+    color: #999999;
+}
+/* Add this to your CSS file */
+.social-button.selected {
+    /* Styles for the selected state */
+    background-color: #555555; /* Adjust the background color as needed */
+    color: #999999; /* Adjust the text color as needed */
+}
+
+/* Menu icon style */
+.menu-icon-container {
+    /* Menu icon container styling */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    border-radius: 50%;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+}
+
+.menu-icon-container:hover {
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3); /* Increase box shadow on hover */
+}
+
+/* Styling for menu icon */
+.menu-icon {
+    /* Menu icon styling */
+    width: 40px;
+    height: 40px;
+    background-color: rgba(188, 188, 188, 0.2);
+    border: 2px solid rgba(188, 188, 188, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icon inside menu icon */
+.menu-icon::after {
+    content: "\1F517"; /* Placeholder icon content */
+    font-size: 24px;
+    color: #999999; /* Match with the background */
+}
+
+/* Share menu style */
+.share-menu {
+    /* Share menu container styling */
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    background-color: #555555;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px;
+    display: none; /* Initially hide the share menu */
+    flex-direction: column;
+    z-index: 2; /* Stack above other elements */
+    text-align: center;
+}
+
+/* Share link style */
+.share-menu button {
+    /* Share link styling */
+    background-color: #555555;
+    color: #999999;
+    border: 2px solid #555555;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+}
+
+/* Center text vertically within the Facebook button */
+.share-menu button:nth-child(4) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for the last share link */
+.share-menu button:last-child {
+    border-bottom: none; /* Remove bottom border for the last button */
+    margin-bottom: 0;
+    padding-bottom: 1;
+}
+
+/* Hover effect for share links */
+.share-menu button:hover {
+    background-color: transparent; /* Transparent background on hover */
+    color: #999999;
+}
+
+/* Display the share menu when the menu icon is active */
+.menu-icon.active + .share-menu {
+    display: block;
+}
+
+.new-button {
+    margin-left: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 80px) {
+    /* Media query for screens with width 80px or less */
+    h1 {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+    .circle-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .menu-icon-container {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Share section style */
+.share-section {
+    text-align: center;
+}
+
+/* Share button style */
+.share-button {
+    /* Share button styling */
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Hover effect for share button */
+.share-button:hover {
+    background-color: #0056b3;
+}
+
+/* Pop-up styles */
+.popup {
+    /* Pop-up container styling */
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #FF9966;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* High stacking order */
+}
+
+.popup p {
+    margin: 0;
+}
+
+/* Cookie Preference link styles */
+.cookie-preference-link {
+    /* Cookie preference link styling */
+    bottom: 10px;
+    align-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    text-decoration: underline;
+    cursor: pointer;
+    z-index: 1; /* Stacking order above other elements */
+    font-size: 10px;
+    background-color: transparent;
+}
+
+/* Hover effect */
+.cookie-preference-link:hover {
+    color: navy; /* Navy on hover */
+}
+
+/* Active (click) effect */
+.cookie-preference-link:active {
+    color: yellow; /* Yellow on click */
+}
+
+/* Visited link style */
+.cookie-preference-link:visited {
+    color: grey; /* Grey for visited links */
+}
+
+/* Set the anchor tag styles */
+.cookie-preference-link a {
+    color: inherit; /* Inherit the color from the parent div */
+    text-decoration: none; /* Remove the underline */
+    display: block; /* Make the anchor tag a block element to fill the parent div */
+    padding: 10px;
+}
+
+.overlay {
+    /* Overlay styling for background shading */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Transparent black */
+    z-index: 1; /* Higher z-index than menu */
+    backdrop-filter: blur(1px); /* Adjust the blur amount as needed */
+}
+
+/* Styles for Cookie Policies Pop-up */
+.popup-cookie {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 2px solid #FF9966;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* High stacking order */
+    max-width: 400px; /* Adjust the maximum width */
+    width: 90%; /* Adjust the width as needed */
+    max-height: 80vh; /* Maximum height of 80% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    text-align: center;
+}
+
+.popup-content {
+    padding: 20px;
+}
+
+.popup-cookie h2 {
+    margin-bottom: 10px;
+}
+
+.popup-cookie p {
+    margin-bottom: 20px;
+}
+
+.popup-cookie button:hover {
+    background-color: #0056b3;
+}
+
+.flagPT{
+    margin-left: -20px;
+    padding-right: 10px;
+    margin-top: 5px; /* Adjusted margin for centering */
+}
+
+.flagUS{
+    margin-left: -38px;
+    padding-right: 10px;
+    margin-top: -5px; /* Adjusted margin for centering */
+}
+
+/* Dropdown menu styling */
+.dropdownPT {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #555555;
+    color: #999999;
+    width: 200px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: -78px;
+}
+
+/* Display the dropdown content when hovering over the dropdown container */
+.dropdownPT:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown item container */
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+/* Style for the separator line in the dropdown menu */
+.dropdown-separator {
+    height: 3px;
+    background-color: #999999;
+    margin: 8px 0;
+    width: 100%;
+}
+
+/* Flag styling */
+.flagPT,
+.flagUS {
+    margin-right: 10px;
+}
+
+/* Centering text */
+.dropdown-item span {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the text in the dropdown menu */
+.dropdown-item.portuguese span {
+    color: #999999; /* Adjust the color for Portuguese text */
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.dropdown-item.english span {
+    color: #999999; /* Adjust the color for English text */
+    font-weight: bold;
+    margin-bottom: 5px ;
+}
+
+/* Add styles for the YouTube and Twitter buttons */
+#youtubeButton,
+#twitterButton {
+    /* Styles for the YouTube and Twitter buttons */
+    background-color: #555555;
+    color: #999999;
+    width: 200px;
+    height: 40px;
+    border: 2px solid #555555;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 15px;
+    margin-right: 15px;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+}
+
+#youtubeButton:hover,
+#twitterButton:hover {
+    background-color: transparent; /* Transparent background on hover */
+    color: #999999;
+}
+
+#youtubeButton.selected,
+#twitterButton.selected {
+    /* Styles for the selected state */
+    background-color: #555555; /* Adjust the background color as needed */
+    color: #999999; /* Adjust the text color as needed */
+}
+
+

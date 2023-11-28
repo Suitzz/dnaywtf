@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script defer src="js/script.js"></script>
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Dany - Exclusive Content">
+    <meta property="og:description" content="Explore exclusive content from Summer. Follow on Twitch, Instagram, Twitter, TikTok, OnlyFans, and Telegram.">
+    <meta property="og:url" content="https://daniel.wtf">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- SEO Keywords -->
+    <meta name="keywords" content="Daniel, tiktok, whatsapp">
+
+    <!-- Author and Publisher -->
+    <meta name="Rafael" content="Rafael">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GV83VX9N6E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-GV83VX9N6E');
+    </script>
+
+    <title>Daniel</title>
+</head>
+
+<body>   
+    <img class="signature" src="assets/img/signature.png">
+
+
+
+    <!-- Main share buttons outside of the menu -->
+    <div class="button-container">
+        <button class="social-button" id="tiktokButton">
+            <div class="svgLogo">
+                <img src="assets/img/tiktok.svg" alt="TikTok Logo" width="24" height="24">
+            </div>
+            <div class="new-button">
+                TikTok
+            </div>
+          <!-- Dropdown menu -->
+<!-- Dropdown menu -->
+<div class="dropdownPT" id="tiktokDropdown">
+    <div class="dropdown-content">
+        <div class="dropdown-item portuguese" onclick="navigateToProfile('portuguese')">
+            <img class="flagPT" src="https://flagcdn.com/24x18/pt.png" alt="Portugal">
+            <span>Português</span>
+        </div>
+        <!-- Separator line -->
+        <div class="dropdown-separator"></div>
+        <div class="dropdown-item english" onclick="navigateToProfile('english')">
+            <img class="flagUS" src="https://flagcdn.com/24x18/us.png" alt="USA">
+            <span>English</span>
+        </div>
+    </div>
+</div>
+
+
+
+    
+        <button class="social-button whatsapp-button" onclick="window.open('https://wa.me/+34613572778', '_blank');">
+            <div class="svgLogo">
+                <img src="assets/img/whatsapp.svg" alt="Whatsapp Logo" width="24" height="24">
+            </div>
+            <div class="new-button">
+                Whatsapp
+            </div>
+        </button>
+
+        <button class="social-button" id="youtubeButton" onclick="redirectToYouTube('https://www.youtube.com/@sapienz_en')">
+            <div class="svgLogo">
+                <img src="assets/img/youtube.svg" alt="YouTube Logo" width="24" height="24">
+            </div>
+            <div class="new-button">
+                YouTube
+            </div>
+        </button>
+    
+        <!-- Twitter Button -->
+        <button class="social-button" id="twitterButton" onclick="redirectToTwitter('https://twitter.com/sapienz_en')">
+            <div class="svgLogo">
+                <img src="assets/img/twitter.svg" alt="Twitter Logo" width="24" height="24">
+            </div>
+            <div class="new-button">
+                Twitter
+            </div>
+        </button>
+    </div>
+
+   <!-- Menu icon -->
+    <div class="menu-icon-container">
+        <div class="menu-icon" onclick="toggleMenu(event)"></div>
+    </div>
+
+    <!-- Share options menu -->
+    <div class="share-menu" id="shareMenu">
+        <button onclick="shareOnSocialMedia('twitter', 'https://dany.wtf')">Twitter</button>
+        <button onclick="shareOnSocialMedia('whatsapp', 'https://dany.wtf')">WhatsApp</button>
+        <button onclick="shareOnSocialMedia('facebook', 'https://dany.wtf')">Facebook</button>
+        <button onclick="copyLink()"><i><b>Copy Link</b></i></button>
+    </div>
+
+    <!-- Pop-up content -->
+    <div id="popup" class="popup">
+        <p>This is additional information in the pop-up. You can customize this content.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <!-- Cookie Preference link -->
+    <div class="cookie-preference-link" id="cookie-preference-link">
+        <a href="#" onclick="showCookiePopup()">Cookie  <br> Policies</a>
+    </div>
+
+    <!-- Overlay div -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <!-- Pop-up for Cookie Policies -->
+    <div class="popup-cookie" id="popupCookie">
+        <h2>Cookie Policies</h2>
+        <!-- Add your cookie policy content here -->
+    </div>
+
+</body>
+
+</html>
